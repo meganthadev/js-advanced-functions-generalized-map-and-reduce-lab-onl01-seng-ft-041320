@@ -7,3 +7,7 @@ function map(source, func) {
 
   return r;
 }
+
+function reduce(source, func) {
+  let 
+}
