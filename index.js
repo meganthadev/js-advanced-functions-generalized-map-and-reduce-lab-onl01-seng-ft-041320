@@ -8,17 +8,13 @@ function map(source, func) {
   return r;
 }
 
-function reduce(source, func, starting) {
-  let r = 
-}
-
-function reduce(src, cb, starting) {
-  let r = (!!starting) ? starting : src[0]
+function reduce(source, func, starting){
+  let r = (!!starting) ? starting : source[0]
   let i = (!!starting) ? 0 : 1
 
-  for (; i < src.length; i++) {
-    r = cb(src[i], r)
+  for (; i < source.length; i++) {
+    r = func(source[i], r)
   }
 
   return r;
-} 
+}
